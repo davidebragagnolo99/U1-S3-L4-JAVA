@@ -1,24 +1,32 @@
 package davidebragagnolo;
-
-import javax.persistence.Entity;
 import java.time.LocalDate;
 import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.NamedQuery;
+
 @Entity
+@NamedQuery(name = "getPartiteVinteInCasa", query = "SELECT p FROM Partita_Di_Calcio p WHERE p.squadraVincente = :squadraVincente")
+@NamedQuery(name = "getPartiteVinteInTrasferta", query = "SELECT p FROM Partita_Di_Calcio p WHERE p.ospite = :squadraVincente")
+@NamedQuery(name = "getPartitePareggiate", query = "SELECT p FROM Partita_Di_Calcio p WHERE p.squadraVincente IS NULL")
 
 public class PartitaDiCalcio extends Evento{
-    private String squadraDiCasa;
-    private String squadraOspite;
-    private String squadraVincente;
-    private int numeroGolSquadraDiCasa;
-    private int numeroGolSquadraOspite;
 
-    public PartitaDiCalcio(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipo, int numeroMassimoPartecipanti, Set<Partecipazione> partecipazioni, Location location, String squadraDiCasa, String squadraOspite, String squadraVincente, int numeroGolSquadraDiCasa, int numeroGolSquadraOspite) {
+    private String squadraDiCasa;
+    private String ospite;
+    private String squadraVincente;
+    private int nGoalHome;
+    private int nGoalAway;
+
+    public PartitaDiCalcio(String titolo, LocalDate dataEvento, String descrizione, TipoEvento tipo,
+                             int numeroMassimoPartecipanti, Location location, Set<Partecipazione> partecipazioni, String squadraDiCasa,
+                             String ospite, String squadraVincente, int nGoalHome, int nGoalAway) {
         super(titolo, dataEvento, descrizione, tipo, numeroMassimoPartecipanti, partecipazioni, location);
         this.squadraDiCasa = squadraDiCasa;
-        this.squadraOspite = squadraOspite;
+        this.ospite = ospite;
         this.squadraVincente = squadraVincente;
-        this.numeroGolSquadraDiCasa = numeroGolSquadraDiCasa;
-        this.numeroGolSquadraOspite = numeroGolSquadraOspite;
+        this.nGoalHome = nGoalHome;
+        this.nGoalAway = nGoalAway;
     }
 
     public String getSquadraDiCasa() {
@@ -29,12 +37,12 @@ public class PartitaDiCalcio extends Evento{
         this.squadraDiCasa = squadraDiCasa;
     }
 
-    public String getSquadraOspite() {
-        return squadraOspite;
+    public String getOspite() {
+        return ospite;
     }
 
-    public void setSquadraOspite(String squadraOspite) {
-        this.squadraOspite = squadraOspite;
+    public void setOspite(String ospite) {
+        this.ospite = ospite;
     }
 
     public String getSquadraVincente() {
@@ -45,19 +53,19 @@ public class PartitaDiCalcio extends Evento{
         this.squadraVincente = squadraVincente;
     }
 
-    public int getNumeroGolSquadraDiCasa() {
-        return numeroGolSquadraDiCasa;
+    public int getnGoalHome() {
+        return nGoalHome;
     }
 
-    public void setNumeroGolSquadraDiCasa(int numeroGolSquadraDiCasa) {
-        this.numeroGolSquadraDiCasa = numeroGolSquadraDiCasa;
+    public void setnGoalHome(int nGoalHome) {
+        this.nGoalHome = nGoalHome;
     }
 
-    public int getNumeroGolSquadraOspite() {
-        return numeroGolSquadraOspite;
+    public int getnGoalAway() {
+        return nGoalAway;
     }
 
-    public void setNumeroGolSquadraOspite(int numeroGolSquadraOspite) {
-        this.numeroGolSquadraOspite = numeroGolSquadraOspite;
+    public void setnGoalAway(int nGoalAway) {
+        this.nGoalAway = nGoalAway;
     }
 }
