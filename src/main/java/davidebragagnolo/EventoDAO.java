@@ -6,11 +6,6 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 import java.util.Set;
 
-import davidebragagnolo.Concerto;
-import davidebragagnolo.GaraDiAtletica;
-import davidebragagnolo.Genere;
-import davidebragagnolo.PartitaDiCalcio;
-
 public class EventoDAO {
     private final EntityManager em;
 
@@ -44,7 +39,7 @@ public class EventoDAO {
         }
     }
 
-    public void refresh(Evento evento) {
+    public void refresh(int evento) {
         em.refresh(evento);
     }
 

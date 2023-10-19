@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89870adf-b41d-4248-a4a1-5816c05dd071" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/davidebragagnolo/Genere.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/davidebragagnolo/Concerto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/davidebragagnolo/Concerto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/davidebragagnolo/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/davidebragagnolo/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/davidebragagnolo/EventoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/davidebragagnolo/EventoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/davidebragagnolo/GaraDiAtletica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/davidebragagnolo/GaraDiAtletica.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/davidebragagnolo/PartitaDiCalcio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/davidebragagnolo/PartitaDiCalcio.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
